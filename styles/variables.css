@@ -6,4 +6,5 @@
 
   --card-title-font-weight: 785;
   --card-text-font-weight: 400;
+  --content-width: clamp(23.4375rem, 30.51vw + 17.34rem, 47.625rem);
 }

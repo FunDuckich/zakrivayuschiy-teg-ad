@@ -17,3 +17,32 @@
   font-variation-settings: 'wght' var(--card-text-font-weight);
 }
 
+.content-section {
+  max-inline-size: var(--content-width);
+  inline-size: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: #fff;
+  margin-block: 100px;
+}
+
+.header__logo {
+  font-family: var(--accent-font);
+  font-size: 49px;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+}
+
+.header__subtitle {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
