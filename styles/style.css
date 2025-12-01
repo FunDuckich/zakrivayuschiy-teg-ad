@@ -11,38 +11,43 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
-  font-variation-settings: 'wght' var(--card-text-font-weight);
+  background-color: var(--page-background-color);
+  background-image: var(--page-background-image);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.content-section {
-  max-inline-size: var(--content-width);
-  inline-size: 100%;
-  margin: 0 auto;
+.card__img-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
-.header {
-  padding: 120px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #000;
-  background-color: #fff;
-  margin-block: 100px;
-}
-
-.header__logo {
-  font-family: var(--accent-font);
-  font-size: 49px;
-  text-transform: uppercase;
-  margin-block-end: 20px;
-}
-
-.header__subtitle {
-  font-family: var(--accent-font);
+.card__img-label {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.6;
+  color: var(--accent-clr, #000);
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
   font-size: 14px;
-  text-transform: uppercase;
+  line-height: normal;
+  text-shadow: 1px 0 0 var(--bg-color),
+  -1px 0 0 var(--bg-color),
+  0 1px 0 var(--bg-color),
+  0 -1px 0 var(--bg-color);
+  mix-blend-mode: hard-light;
+  right: 25px;
+  top: 25px;
 }
 
+@supports (
+  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
+  (text-stroke: 1px var(--page-background-color, #ffffff))
+) {
+  .card__img-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
+    text-stroke: 1px var(--page-background-color, #ffffff);
+  }
+}
